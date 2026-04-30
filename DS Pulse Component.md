@@ -1,5 +1,6 @@
 # How to Use This Design System
 
+
 - All size/spacing values are in **pixels** (no unit suffix).
 - Font weights use string names (e.g., `Regular`, `SemiBold`).
 - Icon library: **Material Symbols Rounded** (Google Fonts).
@@ -716,6 +717,15 @@ Google's *Material Symbols Rounded*, outlined weight 400, 24px default. Link the
 
 
 Then use `<span class="msr">schedule</span>` or the `<Icon name="schedule" />` component.
+
+
+
+## Image
+
+### Logo Siloam
+
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/main/Siloam%20Logo%2016_9.svg" width="160"/>
+
 
 ## Sticker
 
