@@ -717,9 +717,110 @@ Google's *Material Symbols Rounded*, outlined weight 400, 24px default. Link the
 
 Then use `<span class="msr">schedule</span>` or the `<Icon name="schedule" />` component.
 
+## Sticker
+
+### Sticker Patient
+
+#### Allergy
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/main/Asset/sticker_patient/Type=Allergy,%20State=Active.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/main/Asset/sticker_patient/Type=Allergy,%20State=Disabled.svg" width="24"/>
+
+#### Covid Vaccinated
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/main/Asset/sticker_patient/Type=Covid%20vaccinated,%20State=Active.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/main/Asset/sticker_patient/Type=Covid%20vaccinated,%20State=Disabled.svg" width="24"/>
+
+#### Fall Risk
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/main/Asset/sticker_patient/Type=Fall%20Risk,%20State=Active.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/main/Asset/sticker_patient/Type=Fall%20Risk,%20State=Disabled.svg" width="24"/>
+
+#### Fasting
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/main/Asset/sticker_patient/Type=Fasting,%20State=Active.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/main/Asset/sticker_patient/Type=Fasting,%20State=Disabled.svg" width="24"/>
+
+#### On Radiology
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/main/Asset/sticker_patient/Type=On%20Radiology,%20State=Active.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/main/Asset/sticker_patient/Type=On%20Radiology,%20State=Disabled.svg" width="24"/>
+
+#### On Surgery
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/main/Asset/sticker_patient/Type=On%20Surgery,%20State=Active.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/main/Asset/sticker_patient/Type=On%20Surgery,%20State=Disabled.svg" width="24"/>
+
+#### Partial Care
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/main/Asset/sticker_patient/Type=Partial%20Care,%20State=Active.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/main/Asset/sticker_patient/Type=Partial%20Care,%20State=Disabled.svg" width="24"/>
+
+#### Patient Own Med
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_patient/Type=Patient%20Own%20Med%2C%20State=Active.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_patient/Type=Patient%20Own%20Med%2C%20State=Disabled.svg" width="24"/>
+
+#### Patient Taperring
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_patient/Type=Tappering%2C%20State=Active.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_patient/Type=Tappering%2C%20State=Disabled.svg" width="24"/>
+
+#### Total care
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_patient/Type=Total%20Care%2C%20State=Active.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_patient/Type=Total%20Care%2C%20State=Disabled.svg" width="24"/>
+
+### Sticker Vital signs
+
+#### MEWS
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_vitalsigns/sticker_vitalsigns-1.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_vitalsigns/sticker_vitalsigns-2.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_vitalsigns/sticker_vitalsigns-3.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_vitalsigns/sticker_vitalsigns-4.svg" width="24"/>
+
+#### EWS
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_vitalsigns/sticker_vitalsigns-5.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_vitalsigns/sticker_vitalsigns-6.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_vitalsigns/sticker_vitalsigns-7.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_vitalsigns/sticker_vitalsigns-8.svg" width="24"/>
+
+#### PEWS
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_vitalsigns/sticker_vitalsigns-9.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_vitalsigns/sticker_vitalsigns-10.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_vitalsigns/sticker_vitalsigns-11.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_vitalsigns/sticker_vitalsigns.svg" width="24"/>
+
+### Sticker Disease
+
+#### CV
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_disease/Disease=CV%2C%20State=Active.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_disease/Disease=CV%2C%20State=Disabled.svg" width="24"/>
+
+#### DNR
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_disease/Disease=DNR%2C%20State=Active.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_disease/Disease=DNR%2C%20State=Disabled.svg" width="24"/>
+
+#### HAD
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_disease/Disease=HAD%2C%20State=Active.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_disease/Disease=HAD%2C%20State=Disabled.svg" width="24"/>
+
+#### HBS
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_disease/Disease=HBS%2C%20State=Active.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_disease/Disease=HBS%2C%20State=Disabled.svg" width="24"/>
+
+#### HCS
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_disease/Disease=HCS%2C%20State=Active.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_disease/Disease=HCS%2C%20State=Disabled.svg" width="24"/>
+
+#### MRS
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_disease/Disease=MRS%2C%20State=Active.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_disease/Disease=MRS%2C%20State=Disabled.svg" width="24"/>
+
+#### PRT
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_disease/Disease=PRT%2C%20State=Active.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_disease/Disease=PRT%2C%20State=Disabled.svg" width="24"/>
+
+#### RHN
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_disease/Disease=RHN%2C%20State=Active.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_disease/Disease=RHN%2C%20State=Disabled.svg" width="24"/>
+
+#### TBC
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_disease/Disease=TBC%2C%20State=Active.svg" width="24"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Asset/sticker_disease/Disease=TBC%2C%20State=Disabled.svg" width="24"/>
+
 
 # Semantic
-
 
 ## Accent
 
