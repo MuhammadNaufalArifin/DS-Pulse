@@ -1,4 +1,6 @@
-# DS Pulse Design System
+# Pulse Design System
+
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/main/Siloam%20Logo%2016_9.svg" width="600"/>
 
 ## Overview
 
@@ -43,24 +45,7 @@ Meaning:
 * Do NOT create new tokens
 * Do NOT infer missing values
 * Use ONLY values defined in the design system
-
----
-
-```text id="1jlwmn"
-DS-Pulse/
-│
-├── DS Pulse Component.md
-│
-├── Asset/
-│   ├── sticker_patient/
-│   ├── sticker_vitalsigns/
-│   ├── sticker_disease/
-│
-├── Siloam Logo 16_9.svg
-│
-└── README.md
-```
-
+  
 ---
 
 # Main Documentation
@@ -221,7 +206,7 @@ Maintain >90% similarity with the design system.
 1. Update markdown documentation
 2. Attach markdown to LLM
 3. Generate UI/component
-4. Validate against design system
+4. Validate against the design system
 5. Iterate if necessary
 6. Push to production
 ```
@@ -256,19 +241,6 @@ This design system includes:
 * ARIA guidelines
 * Touch target sizing
 * WCAG color contrast consideration
-
----
-
-# Technology Recommendation
-
-Recommended stack:
-
-* React
-* TypeScript
-* TailwindCSS
-* Storybook
-* MD Documentation
-
 
 ---
 
