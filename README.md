@@ -1,6 +1,6 @@
 # Pulse Design System
 
-<img src="[https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/main/Siloam%20Logo%2016_9.svg](https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Thumbnail.svg)" width="600"/>
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/refs/heads/main/Thumbnail.svg" width="600"/>
 
 ## Overview
 
