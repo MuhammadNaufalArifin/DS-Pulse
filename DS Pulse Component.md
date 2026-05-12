@@ -1,6 +1,5 @@
 # How to Use This Design System
 
-
 - All size/spacing values are in **pixels** (no unit suffix).
 - Font weights use string names (e.g., `Regular`, `SemiBold`).
 - Icon library: **Material Symbols Rounded** (Google Fonts).
@@ -3054,7 +3053,6 @@ Uploading File
 | `icon-size` | size | `16` |
 
 ### Input Usage
-
 Description:
 Input is used to collect user data in various formats.
 Input supports multiple variants including text, password, number, select, date, phone number, and file input.
@@ -3924,15 +3922,25 @@ Disabled overrides interaction
 
 **Layout Rules**
 - Maintain consistent padding inside cells.
-- Allow row height to adjust based on content.
+- Allow row height to adapt based on content.
 - Align column content consistently.
 - Keep spacing predictable across rows.
 - Maintain consistent column structure.
+- Ensure content does not touch cell edges.
 
 **Border Rules**
 - Use Full border style for dense data tables.
 - Use Top-Bottom border style for minimal layouts.
 - Apply consistent border style across entire table.
+- Use consistent border color across all rows and columns.
+
+**Radius Rules (CRITICAL)**
+- Set border-radius: 0 for table container.
+- Set border-radius: 0 for header, row, and cell.
+- Ensure no rounded corners are applied to table.
+- Maintain sharp edges on all table boundaries.
+- Override parent container radius when wrapping table.
+- Ensure table does not inherit border radius from parent (e.g., Card, Section, Modal).
 
 **Content Rules**
 - Allow flexible components inside cells.
@@ -3989,6 +3997,18 @@ Column Name + Sort Icon
 - Don't mix border styles randomly.
 - Don't remove borders inconsistently.
 
+**Radius Rules (CRITICAL)**
+- Don't apply border-radius to table.
+- Don't use rounded corners on header, row, or cell.
+- Don't allow table to inherit border-radius from parent container.
+-Don't wrap table inside components with active border-radius (e.g., Card with rounded edges).
+
+**Container Rules**
+- Don't place table inside Card without overriding radius.
+- Don't use parent containers with overflow: hidden + radius.
+- Don't allow visual clipping caused by rounded parent container.
+- Don't rely on default component styles that include radius.
+
 **Content Rules**
 - Don't restrict cells to text only.
 - Don't overcrowd cells.
@@ -4009,8 +4029,6 @@ Column Name + Sort Icon
 - Don't replace semantic table structure with generic layout.
 - Don't reduce readability with tight spacing.
 - Don't rely only on color to communicate structure.
-
-
 
 ## Tab
 
@@ -4809,14 +4827,21 @@ It contains a left section (logo) and a right section (dynamic content such as a
 #### Anatomy
 
 1. Container
-2. Toggle Button (icon-only button, size: small)
-3. Menu List
-4. Menu Item
-   - Icon
-   - Label (hidden in collapse)
-   - Badge (optional)
-5. Submenu (optional)
-   - Nested Menu Items
+2. Button (Collapse / Expand) 
+      - Type: Icon-only button
+      - Size: Small
+      - Position: Top of sidenav (above menu list)
+3. Icon:
+      - Collapse → arrow-left
+      - Expand → arrow-right
+4. Menu List
+5. Menu Item
+      - Icon
+      - Label (hidden in collapse)
+      - Badge (optional)
+6. Submenu
+      - Inline (expand)
+      - Dropdown (collapse)
 
 #### Properties
 
@@ -4845,7 +4870,7 @@ It contains a left section (logo) and a right section (dynamic content such as a
 - Maintain consistent spacing between items.
 - Use indentation for submenu hierarchy.
 
-**Mode Rules (Collapse vs Expand)** ⭐
+**Mode Rules (Collapse vs Expand)** 
 Collapse
 - Show icon only.
 - Hide labels.
@@ -4856,7 +4881,15 @@ Expand
 - Display submenu inline below parent item.
 - Allow full navigation visibility.
 
-**State Rules (Default / Hover / Active)** ⭐
+**Toggle Button Rules**
+- Place toggle button at the top of sidenav, above all menu items.
+- Use icon-only button (reuse Button component, size: small).
+- Use directional icon to indicate action (not current state).
+- Maintain consistent spacing between toggle button and menu.
+- Ensure toggle is always visible and accessible.
+- Preserve navigation state when toggling (active item remains active).
+
+**State Rules (Default / Hover / Active)** 
 Default
 - Show normal background and text.
 Hover
@@ -4868,11 +4901,13 @@ Active
 - Persist active state across navigation.
 
 **Submenu Rules** 
-
-- Use dropdown submenu in collapse mode.
-- Use inline submenu in expand mode.
-- Keep submenu aligned with parent item.
-- Maintain indentation for hierarchy.
+- Use dropdown submenu in collapse mode (hover trigger).
+- Include parent title inside dropdown submenu.
+- Ensure dropdown submenu has clear hierarchy:
+Title → Submenu items
+- Allow submenu to be shown/hidden (toggle) in expand mode.
+- Maintain consistent spacing and alignment inside dropdown.
+- Ensure dropdown does not overlap important UI elements.
 
 **Interaction Rules**
 - Allow click to navigate.
@@ -4907,16 +4942,25 @@ Active
 - Don't show labels in collapse mode.
 - Don't hide submenu in expand mode.
 
+**Toggle Button Rules**
+- Don't place toggle button inside menu list.
+- Don't hide toggle button in any state.
+- Don't use text label for toggle button.
+- Don't use ambiguous icons.
+- Don't reset active menu when toggling sidenav.
+- Don't change toggle position between modes.
+
 **State Rules** 
 - Don't remove hover feedback.
 - Don't hide active state.
 - Don't make active state unclear.
 
 **Submenu Rules**
-
-- Don't use inline submenu in collapse mode.
-- Don't use dropdown submenu in expand mode.
-- Don't misalign submenu hierarchy.
+- Don't show submenu inline in collapse mode.
+- Don't remove title from dropdown submenu.
+- Don't make submenu always visible in collapse mode.
+- Don't prevent submenu from being toggled in expand mode.
+- Don't create inconsistent submenu behavior between modes.
 
 **Interaction Rules**
 - Don't block navigation interaction.
