@@ -696,6 +696,8 @@ Use ONLY the exact token values provided. Do not add new tokens or change existi
 
 ## Icon
 
+### Icon Size
+
 | Token | Type | Value |
 |-------|------|-------|
 | `xs` | size | `16` |
@@ -706,17 +708,165 @@ Use ONLY the exact token values provided. Do not add new tokens or change existi
 | `2xl` | size | `36` |
 | `3xl` | size | `40` |
 
-### Iconography
+### Overview
 
-Google's *Material Symbols Rounded*, outlined weight 400, 24px default. Link the stylesheet:
+This design system uses **Material Symbols** as the single source of truth for all icons.
+
+Icons are not defined one-by-one, but referenced using a standardized system to ensure:
+
+* Consistency
+* Scalability
+* LLM compatibility
+* Developer efficiency
+
+---
+
+### Icon Source
+
+* Library: Material Symbols
+* Source: https://fonts.google.com/icons
+
+---
+
+### Icon Specification
+
+All icons MUST follow this configuration:
+
+| Property     | Value                    |
+| ------------ | ------------------------ |
+| Style        | Material Symbols Rounded |
+| Weight       | 400                      |
+| Fill         | 0 (Outlined)             |
+| Grade        | 0                        |
+| Optical Size | 24                       |
+
+---
+
+### Usage Rules
+
+* Use Material Symbols as the default icon system across all components.
+* Use icon names exactly as defined in the official library.
+* Ensure icons are consistent in style and size across the application.
+* Use icons only when they add clarity or improve usability.
+* Pair icons with labels when meaning is not obvious.
+
+---
+
+### Naming Rules
+
+* Always use original Material icon names.
+* Do NOT rename or alias icons.
+
+Examples:
+
+```
+home
+settings
+search
+close
+check
+keyboard_arrow_left
+keyboard_arrow_right
+expand_more
+expand_less
+```
+
+---
+
+### When to Use Icons
+
+Use icons for:
+
+* Navigation (e.g., menu, back, next)
+* Actions (e.g., add, delete, edit)
+* Status (e.g., success, error, warning)
+* Indicators (e.g., dropdown, expand, collapse)
+
+---
+
+### When NOT to Use Icons
+
+* Do not use icons as decoration only.
+* Do not overload UI with too many icons.
+* Do not use icons without clear meaning.
+* Do not mix icon styles (filled vs outlined).
+
+---
+
+### Implementation (For Developers)
+
+#### HTML
 
 ```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
+
+<span class="material-symbols-rounded">icon_name</span>
 ```
 
+---
 
-Then use `<span class="msr">schedule</span>` or the `<Icon name="schedule" />` component.
+#### React
 
+```tsx
+<Icon name="icon_name" />
+```
+
+---
+
+### Markdown Documentation Rules
+
+* Icons should be referenced by name only.
+* Do NOT rely on font rendering inside markdown.
+* Preview is optional and should use SVG if needed.
+
+Example:
+
+```
+Icon: search
+Icon: close
+Icon: expand_more
+```
+
+---
+
+### Consistency Rules
+
+* Use the same icon for the same action across all components.
+* Avoid using multiple icons for identical meaning.
+* Maintain consistent placement of icons (left/right of label).
+
+---
+
+### Accessibility Rules
+
+* Provide `aria-label` for icon-only buttons.
+* Ensure sufficient contrast.
+* Do not rely only on icons to convey meaning.
+
+---
+
+### LLM Rules (CRITICAL)
+
+* Always reference icons by name.
+* Do NOT generate custom icons.
+* Do NOT change icon style, weight, or size.
+* Follow the defined Material Symbols specification strictly.
+
+---
+
+### Summary
+
+```
+Icon = Reference (Material Symbols)
+Not = Asset per component
+```
+
+This approach ensures:
+
+* Clean documentation
+* Scalable system
+* Predictable AI output
+* Easier developer implementation
 
 
 ## Image
@@ -1029,6 +1179,9 @@ Semi:
 ---
 ## Alert
 
+**Description:**  
+Inline feedback message used to communicate important information that requires user attention.
+
 ### Alert Color
 
 #### Default
@@ -1091,10 +1244,6 @@ Semi:
 
 
 ### Alert Usage
-
-**Description:**  
-Inline feedback message used to communicate important information that requires user attention.
-
 
 #### Anatomy
 1. Container
@@ -1172,6 +1321,11 @@ Inline feedback message used to communicate important information that requires 
 
 ## Avatar
 
+Description:
+Avatar is used to represent a user or entity.
+Avatar size controls the dimension of the avatar container.
+Content inside the avatar fills the container.
+
 ### Avatar Size
 
 #### Xs
@@ -1227,11 +1381,6 @@ Inline feedback message used to communicate important information that requires 
 | `radius` | borderRadius | `9999` |
 
 ### Avatar Usage
-
-Description:
-Avatar is used to represent a user or entity.
-Avatar size controls the dimension of the avatar container.
-Content inside the avatar fills the container.
 
 #### Properties
 | Property | Values |
@@ -1599,6 +1748,8 @@ Home → ... → Electronics → Laptop
 
 ## Button 
 
+**Description:** Interactive element used to trigger actions.
+
 ### Button Color
 
 #### Primary
@@ -1767,8 +1918,6 @@ Home → ... → Electronics → Laptop
 
 
 ### Button Usage
-
-**Description:** Interactive element used to trigger actions.
 
 #### Anatomy
 1. Container
@@ -2653,9 +2802,6 @@ aria-label="Remove tag"
 - Don't use icons without accessible labels.
 - Don't create chips that are too small to tap.
 
-
-
-
 ## Divider
 
 ### Divider Color
@@ -2872,9 +3018,19 @@ Phone
 
 1. Container
 2. Upload Icon
+    - Icon: icon_upload
+    - Size: `24`
 3. Instruction Text
-4. Helper Text ("or")
-5. Button (reuse: Button Small)
+    - Example: "Drag and drop your files here"
+    - Style: primary text
+4. Helper Text
+    - Example: "or"
+    - Style: muted text
+5. Button
+    - Component: Button
+    - Variant: Primary
+    - Size: Small
+    - Label: "Browse files"
 6. File List
 7. File Item
    - File Icon
@@ -2911,6 +3067,24 @@ Phone
 - Place upload icon and text centered.
 - Keep file list below dropzone area.
 - Maintain spacing between file items.
+- Center all content horizontally and vertically inside dropzone.
+- Use vertical stacking:
+    Icon → Instruction → Helper → Button
+- Maintain consistent spacing using {gap}.
+- Use dashed border style for default state.
+
+**Icon Rules**
+- Use icon_upload as the default upload icon.
+- Keep icon centered.
+- Use muted color in default state.
+- Ensure icon size consistency across all dropzones.
+
+**Button Rules**
+- Use Button component (reuse existing system).
+- Use Primary variant.
+- Use Small size.
+- Place button below helper text.
+- Keep button centered.
 
 **Content Rules**
 - Use clear instruction text.
@@ -2919,6 +3093,10 @@ Phone
   Example: "Browse files"
 - Display file name and file size.
 - Show status message when needed.
+- Maintain hierarchy:
+    - Instruction (primary)
+    - Helper (secondary)
+    - Action (button)
 
 **Behavior Rules (Upload State)**
 Default
@@ -3017,9 +3195,12 @@ Uploading File
 - Don't block user from removing files.
 - Don't allow duplicate uploads without handling.
 
-
-
 ## Input
+
+Description:
+Input is used to collect user data in various formats.
+Input supports multiple variants including text, password, number, select, date, phone number, and file input.
+Input supports icons, prefix/suffix elements, validation states, and flexible content.
 
 ### Input Color
 
@@ -3053,10 +3234,6 @@ Uploading File
 | `icon-size` | size | `16` |
 
 ### Input Usage
-Description:
-Input is used to collect user data in various formats.
-Input supports multiple variants including text, password, number, select, date, phone number, and file input.
-Input supports icons, prefix/suffix elements, validation states, and flexible content.
 
 #### Anatomy
 
@@ -3224,11 +3401,11 @@ Prefix + Suffix Example
 ### Pagination Usage
 
 1. Container
-2. Previous Button (optional)
+2. Previous Button (optional, use icon_west)
 3. Page Item
 4. Active Page
 5. Ellipsis (...)
-6. Next Button (optional)
+6. Next Button (optional, Use icon_east)
 
 #### Properties
 
@@ -3471,6 +3648,11 @@ Example:
 
 ## Radio
 
+Description:
+Radio allows users to select one option from a list of mutually exclusive choices.
+Only one radio button can be selected at a time within the same group.
+Radio supports label text, disabled state, and error validation.
+
 ### Radio Color
 
 | Token | Type | Value |
@@ -3497,11 +3679,6 @@ Example:
 | `gap` | spacing | `8` |
 
 ### Radio Usage
-
-Description:
-Radio allows users to select one option from a list of mutually exclusive choices.
-Only one radio button can be selected at a time within the same group.
-Radio supports label text, disabled state, and error validation.
 
 ### Anatomy
 1. Radio Control
@@ -4032,6 +4209,11 @@ Column Name + Sort Icon
 
 ## Tab
 
+Description: Tab allows users to switch between different views or content sections within the same context.
+
+Inner → segmented / contained tab
+Outer → underline navigation tab
+
 ### Tab Color
 
 #### Inner
@@ -4090,11 +4272,6 @@ Column Name + Sort Icon
 | `bottom-stroke-height` | size | `1` |
 
 ### Tab Usage
-
-Description: Tab allows users to switch between different views or content sections within the same context.
-
-Inner → segmented / contained tab
-Outer → underline navigation tab
 
 #### Anatomy
 
@@ -4246,6 +4423,8 @@ Example:
 
 ## Toast
 
+**Description:** Temporary feedback notification above main content.
+
 ### Toast Color
 
 #### Primary
@@ -4308,8 +4487,6 @@ Example:
 | `gap` | spacing | `14` |
 
 ### Toast Usage
-
-**Description:** Temporary feedback notification above main content.
 
 #### Anatomy
 1. Container
@@ -4394,6 +4571,8 @@ Example:
 
 ## Tooltip
 
+**Description:** Short contextual label that appears near a trigger element on hover or focus. Used to explain icon-only buttons, abbreviations, or any element that benefits from a brief label.
+
 ### Tooltip Color
 
 | Token | Type | Value |
@@ -4412,8 +4591,6 @@ Example:
 
 
 ### Tooltip usage 
-
-**Description:** Short contextual label that appears near a trigger element on hover or focus. Used to explain icon-only buttons, abbreviations, or any element that benefits from a brief label.
 
 #### Anatomy
 1. Container — the tooltip bubble
@@ -4653,6 +4830,10 @@ Example:
 
 ## Header Navigation Bar
 
+Description:
+Header Navigation Bar is a top-level layout component used for global navigation and contextual actions.
+It contains a left section (logo) and a right section (dynamic content such as actions, user info, and controls).
+
 ### Header Navigation Bar Color
 
 | Token | Type | Value |
@@ -4687,10 +4868,6 @@ Example:
 
 ### Header Navigation Bar Usage
 
-Description:
-Header Navigation Bar is a top-level layout component used for global navigation and contextual actions.
-It contains a left section (logo) and a right section (dynamic content such as actions, user info, and controls).
-
 #### Anatomy
 
 1. Container
@@ -4711,6 +4888,9 @@ It contains a left section (logo) and a right section (dynamic content such as a
 
 **Usage Rules**
 - Always place logo on the left.
+- use this logo for header on the left 
+<img src="https://raw.githubusercontent.com/MuhammadNaufalArifin/DS-Pulse/main/Siloam%20Logo%2016_9.svg" width="85px" height="48px"/>
+
 - Use right section for contextual actions.
 - Keep header consistent across all pages.
 - Use header for global navigation and user actions.
@@ -4828,12 +5008,12 @@ It contains a left section (logo) and a right section (dynamic content such as a
 
 1. Container
 2. Button (Collapse / Expand) 
-      - Type: Icon-only button
+      - Type: Icon-only button (Use primary)
       - Size: Small
       - Position: Top of sidenav (above menu list)
 3. Icon:
-      - Collapse → arrow-left
-      - Expand → arrow-right
+      - Collapse → keyboard-arrow-left
+      - Expand → keyboard-arrow-right
 4. Menu List
 5. Menu Item
       - Icon
