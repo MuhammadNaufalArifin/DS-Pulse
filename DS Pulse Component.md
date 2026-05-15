@@ -1647,7 +1647,7 @@ Icon → Centered
 #### Anatomy
 
 1. Container
-2. Breadcrumb Item - Label (text) - Separator Icon (arrow-right)
+2. Breadcrumb Item - Label (text) - Separator Icon (icon-Keyboard-arrow-right)
 3. Current Item (last item, non-clickable)
 
 #### Properties
@@ -3022,13 +3022,15 @@ Phone
     - Size: `24`
 3. Instruction Text
     - Example: "Drag and drop your files here"
-    - Style: primary text
+    - Style: primary, regular, muted text
+    - Size: `14`
 4. Helper Text
     - Example: "or"
-    - Style: muted text
+    - Style: primary, regular, muted text
+    - Size: `14`
 5. Button
     - Component: Button
-    - Variant: Primary
+    - Variant: Primary (text only)
     - Size: Small
     - Label: "Browse files"
 6. File List
