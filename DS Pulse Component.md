@@ -1090,8 +1090,8 @@ This approach ensures:
 Type: Container
 Width: 100%
 Layout: Vertical
-Background: `{accordioncolor.background}`
-Border: `{accordioncolor.border}`
+Background: `ffffff`
+Border: `afc4d6`
 Overflow: Hidden
 
 #### Structure
@@ -1108,39 +1108,39 @@ Header:
 - Align: Center
 - Justify: Space Between
 - Height: 36
-- Padding: `{accordionsize.padding-x}`, `{accordionsize.padding-y}`
-- Background:`{accordioncolor.background}`
+- Padding: `8`
+- Background:`ffffff`
 Title:
-- Font Size: `{font.size.sm}`
+- Font Size: `14`
 - Weight: 700
-- Color: `{accordioncolor.text}`
+- Color: `#111827`
 - Max Lines: 1
 Icon:
-- Size: `{icon.sm}`
+- Size: `20`
 - Position: Right
 Body:
 - Layout: Vertical
-- Font Size: `{font.size.sm}`
+- Font Size: `14`
 - Weight: 400
-- Padding: `{accordionsize.padding-x}`, `{accordionsize.padding-y}`
-- Gap: `{accordionsize.gap}`
-- Background: `{accordioncolor.background}`
+- Padding: `8`
+- Gap: `8`
+- Background: `ffffff`
 - Visibility: Hidden
 
 #### Variants
 Full:
-- Padding: `{accordionsize.padding-x}`, `{accordionsize.padding-y}`
+- Padding: `8`
 - Radius: 4 4 0 0
 - Border: 1
 Semi:
-- Padding: `{accordionsize.padding-x}`, `{accordionsize.padding-y}`
+- Padding: `8`
 - Border Top: 1
 
 
 #### Constraints
 - Header: 36–44 height, clickable
 - Title: 1 line, ellipsis
-- Icon: fixed right, `{icon.sm}`
+- Icon: fixed right, `20`
 - Body: auto height, hidden when collapsed
 - Touch target: min 36
 - No overflow
@@ -1248,8 +1248,8 @@ Inline feedback message used to communicate important information that requires 
 #### Anatomy
 1. Container
 2. Leading Icon — (`20`, left of title)
-3. Title text — key message (text is bolder than the description text `{font.family.primary}`, `{font.weight.bold}`,`{font.size.sm}`)
-4. Description Text - additional explanation (below the title text `{font.family.primary}`, `{font.weight.regular}`,`{font.size.sm}`)
+3. Title text — key message (text is bolder than the description text `inter`, `bold`,`14`)
+4. Description Text - additional explanation (below the title text `inter`, `bold`,`14`)
 5. Action Button (Optional)  - Used for quick action  Example: Retry
 6. Close Button (Optional)  - Used for dismissible alerts
 
@@ -1539,7 +1539,7 @@ Icon → Centered
 
 #### Anatomy
 1. Container
-2. Number label (`{font.family.primary}`, `{font.weight.bold}`)
+2. Number label (`inter`, `bold`, `14`)
 3. Optional Dot Indicator
 
 #### Properties
@@ -1647,7 +1647,7 @@ Icon → Centered
 #### Anatomy
 
 1. Container
-2. Breadcrumb Item - Label (text) - Separator Icon (icon-Keyboard-arrow-right)
+2. Breadcrumb Item - Label (text, `inter`, `12`, `regular`)- Separator Icon (icon-Keyboard-arrow-right, `14`)
 3. Current Item (last item, non-clickable)
 
 #### Properties
@@ -1922,7 +1922,7 @@ Home → ... → Electronics → Laptop
 #### Anatomy
 1. Container
 2. Leading Icon — Optional 
-3. Label — Required in text mode, `{font.family.primary}`, `{font.weight.bold}`
+3. Label — Required in text mode, `inter`, `bold`
 4. Trailing Icon — Optional
 
 #### Icon Usage
@@ -1943,7 +1943,7 @@ Home → ... → Electronics → Laptop
 | Font color white | use `#ffffff` | for button primary and error |
 | Font color black | use `#111827` | for button secondary, caution, safe, ghost, and outline |
 | Font color disabled | use `#57534e` | for button disabled |
-| Font size | use use `xs`, `sm`, `md` | for button small, regular, large |
+| Font size | use use `12`, `14`, `16` | for button small, regular, large |
 
 
 #### State Behavior
@@ -2434,7 +2434,7 @@ Minimum clickable area → 32–40px
 1. Checkbox Container
 2. Checkbox Input
 3. Checkbox Indicator (check icon)
-4. Label Text — Optional (`{font.family.primary}`, `{font.weight.regular}`,`{font.size.sm}`)
+4. Label Text — Optional (`inter`, `regular`,`14`)
 5. Helper Text — Optional
 6. Error Text — Optional
 
@@ -2693,7 +2693,7 @@ I agree to the Terms and Conditions
 #### Anatomy
 1. Container
 2. Leading Icon — Optional 
-3. Label — Required in text mode, `{font.family.primary}`, `{font.weight.bold}`
+3. Label — Required in text mode, `inter`, `bold`
 4. Trailing Icon — Optional
 
 #### Properties
@@ -2802,6 +2802,187 @@ aria-label="Remove tag"
 - Don't use icons without accessible labels.
 - Don't create chips that are too small to tap.
 
+
+## Date Picker
+
+### Date Picker Color
+
+| Token | Type | Value |
+|-------|------|-------|
+| `background` | color | `ffffff` |
+| `border` | color | `afc4d6` |
+| `text` | color | `#111827` |
+| `text-selected` | color | `ffffff` |
+| `text-muted` | color | `6b7280` |
+| `background-today` | color | `d9ddf0` |
+| `background-selected` | color | `00277F` |
+| `background-range` | color | `f5f5f4` |
+| `icon` | color |  `111827` |
+| `shadow` | shadow | `0 4px 8px rgba(0,0,0,0.08)` |
+
+### Date Picker Size
+
+| Token | Type | Value |
+|-------|------|-------|
+| `padding` | spacing | `8` |
+| `gap` | spacing | `8` |
+| `cell-size` | size | `36` |
+| `cell-gap` | spacing | `0` |
+| `spacing` | size | `4` |
+| `radius` | borderRadius | `12` |
+| `border-width` | borderWidth | `1` |
+| `icon-size` | size | `20` |
+| `radius-selected` | borderRadius | `9999` |
+| `radius-today` | borderRadius | `9999` |
+| `radius-range-start` | borderRadius | `9999 0 0 9999` |
+| `radius-range-end` | borderRadius | `0 9999 9999 0` |
+
+### Date Picker Usage
+
+#### Anatomy 
+1. Container
+2. Header
+  - Month & Year label - size `14`, bold
+  - Navigation button (keyboard_arrow_left, keyboard_arrow_right)
+3. Week Label (Sun–Sat) - size `14`, bold
+4. Date Grid
+5. Date Cell - size `14`, regular
+6. Time Input (optional) -  Icon: `schedule` (Material Symbols)
+7. Month Selector (monthly picker)
+8. Range Highlight Layer
+
+#### Variant
+| Variant          | Description                         |
+| ---------------- | ----------------------------------- |
+| Single           | Select single date                  |
+| Single Range     | Select range within single calendar |
+| Single with Time | Date + time input                   |
+| Monthly Picker   | Select month & year                 |
+| Double           | Two calendars side-by-side          |
+| Double Range     | Range selection across calendars    |
+| Double with Time | Range + time input                  |
+
+#### Properties
+| Property       | Values            |
+| -------------- | ----------------- |
+| Mode           | Single, Range     |
+| Calendar Type  | Single, Double    |
+| Time           | Enabled, Disabled |
+| Month Picker   | Enabled, Disabled |
+| Default Date   | Date              |
+| Min Date       | Date              |
+| Max Date       | Date              |
+| Disabled Dates | Array             |
+
+#### Date State
+| State    | Style                                       |
+| -------- | ------------------------------------------- |
+| Default  | Normal text                                 |
+| Today    | `{background-today}`                        |
+| Selected | `{background-selected}` + `{text-selected}` |
+| Range    | `{background-range}`                        |
+| Hover    | Subtle background                           |
+| Disabled | `{text-muted}`                              |
+
+#### State Priority
+
+Selected > Range > Today > Default
+
+
+#### Do & Don't
+
+##### ✅ Do
+
+**Mode Rules**
+
+- Single Mode
+    - Select only one date
+    - Apply {background-selected}
+- Range Mode
+    - First click = start
+    - Second click = end
+    - If end < start → reset selection
+    - Allow selecting same date (start = end)
+    - Apply {background-range} between dates
+    - Apply {background-selected} on edges
+- Time Mode
+    - Show time input below calendar
+    - Use format HH:mm
+    - Sync time with selected date
+    - Time input appears below each calendar (double mode)
+- Monthly Picker
+    - Open when clicking month label
+    - Show month grid
+    - Allow year navigation
+    - Update calendar after selection
+- Double Calendar Mode
+    - Show two calendars side-by-side
+    - Sync navigation
+    - Use for range selection
+    - Left calendar = current month
+    - Right calendar = next month
+    - Navigation updates both calendars
+
+**Interaction Rules**
+- Click date to select
+- Hover date to preview range
+- Click month label to open monthly picker
+- Use navigation arrows to change month
+- Update value instantly after interaction
+
+**Layout Rules**
+- Keep grid alignment consistent
+- Use equal cell size
+- Maintain spacing using tokens
+- Align week labels with grid
+- Keep layout compact
+- Use shadow for elevation
+
+**Visual Rules**
+- Highlight today using {background-today}
+- Highlight selected using {background-selected}
+- Highlight range using {background-range}
+- Ensure text readability
+
+**Usage Rules**
+- Use single picker for simple cases
+- Use range for interval selection
+- Use double calendar for long range
+- Use time only when needed
+
+##### ❌ Don't
+
+**Mode Rules**
+- Don't mix single and range behavior
+- Don't show time input when disabled
+- Don't allow incomplete range selection
+- Don't break double calendar sync
+
+**Interaction Rules**
+- Don't allow invalid date selection
+- Don't remove hover preview in range
+- Don't break navigation behavior
+- Don't delay selection feedback
+
+**Layout Rules**
+- Don't misalign grid and labels
+- Don't use inconsistent spacing
+- Don't stretch cells unevenly
+- Don't overcrowd UI
+
+**Visual Rules**
+- Don't use inconsistent colors
+- Don't make selected state unclear
+- Don't remove range highlight
+- Don't reduce contrast
+
+**Usage Rules**
+- Don't overload with unnecessary features
+- Don't confuse user with too many modes
+- Don't hide important interaction
+
+
+
 ## Divider
 
 ### Divider Color
@@ -2868,7 +3049,7 @@ aria-label="Remove tag"
 1. Container
 2. Dropdown Panel
 3. Option Item
-4. Label
+4. Label (`14`)
 5. Leading Element (optional)
    - Icon
    - Flag (phone)
@@ -3237,36 +3418,141 @@ Input supports icons, prefix/suffix elements, validation states, and flexible co
 
 ### Input Usage
 
-#### Anatomy
+#### Input - Text
+Used for general text input.
 
-1. Label (optional)
-2. Input Container
-    Prefix (optional)
-    Value / Placeholder
-    Suffix / Icon (optional)
+##### Anatomy
+1. Label
+2. Input Field
 3. Helper Text (optional)
 4. Error Message (optional)
 
-#### Properties
+##### Behavior
+- Supports free text input
+- Standard validation
+
+---
+
+#### Input - Password
+Used for sensitive information.
+
+##### Anatomy
+1. Label
+2. Input Field
+3. Visibility Toggle Icon (👁)
+4. Helper / Error
+
+##### Behavior
+- Mask input by default
+- Toggle visibility via suffix 
+
+---
+
+#### Input - Number
+Used for numeric values.
+
+##### Anatomy
+1. Label
+2. Input Field
+3. Stepper Control (▲▼)
+
+##### Behavior
+- Only numeric input allowed
+- Supports increment / decrement
+
+---
+
+#### Input - Phone Number
+Used for phone number input with country code.
+
+##### Anatomy
+1. Label
+2. Prefix (Country Code)
+3. Input Field
+
+##### Behavior
+- Prefix is selectable
+- Use the dropdown menu for phone numbers and country images along with their codes
+    ex: [imgflagcountry] Indonesia (+62)
+- Only numeric input allowed
+Example:
++62 ▼ | 8578901234
+
+---
+
+#### Input - Select
+Used when predefined options exist.
+
+##### Anatomy
+1. Label
+2. Input Field
+3. Dropdown Icon (▼)
+
+##### Behavior
+- Opens dropdown list
+- Select one option
+
+---
+
+#### Input - Date Time Picker
+Used for date or date-time selection.
+
+##### Anatomy
+1. Label
+2. Input Field
+3. Calendar Icon
+
+##### Behavior
+- Opens date picker
+- Supports date selection
+
+---
+
+#### Input - Text Area
+Used for multi-line text input.
+
+##### Anatomy
+1. Label
+2. Text Area Field
+
+##### Behavior
+- Supports long text
+- Can be resizable (optional)
+
+---
+
+#### Input - File
+Used for uploading files.
+
+##### Anatomy
+1. Label
+2. Upload Button
+3. File Name Display
+
+##### Behavior
+- Opens file picker
+- Displays selected file name
+
+---
+#### Shared Properties
 
 | Property | Values |
 |----------|--------|
-| Variant | Text, Password, Number, Phone, Select, Date, Date Range, File |
 | Size | Default |
 | Label | Optional |
 | Placeholder | Optional |
 | Helper Text | Optional |
 | Error Message | Optional |
-| Prefix | Optional |
-| Suffix | Optional |
-| Icon | Optional |
-| Required | Optional |
 | Disabled | Optional |
 
 
 #### Do & Don't
 
 ##### ✅ Do
+
+- Use correct variant based on data type
+- Keep layout consistent
+- Use label for clarity
 
 **Usage Rules**
 - Use appropriate input variant based on data type.
@@ -3307,7 +3593,7 @@ State Priority:
 Error > Focus > Default  
 Disabled overrides interaction
 
-**Interaction Rules (Prefix, Suffix, Icon)** ⭐
+**Interaction Rules (Prefix, Suffix, Icon)** 
 - Use prefix for structured values (example: country code).
 - Use suffix for action icons (example: password visibility).
 - Use dropdown icon for select input.
@@ -3335,6 +3621,10 @@ Prefix + Suffix Example
 - Use correct input type for semantic meaning.
 
 ##### ❌ Don't
+
+- Don't mix multiple behaviors in one input
+- Don't use wrong input type
+- Don't remove validation feedback
 
 **Usage Rules**
 - Don't use incorrect input variant.
@@ -3369,8 +3659,6 @@ Prefix + Suffix Example
 - Don't rely only on color to indicate state.
 - Don't hide validation messages.
 
-
-
 ## Pagination
 
 ### Pagination Color
@@ -3400,7 +3688,61 @@ Prefix + Suffix Example
 | `border-radius`| borderRadius | `4` |
 | `min-width` | size | `36` |
 
+### Pagination Layout
+
+Pagination can be combined with **Rows Per Page control** in table footer.
+
+| Area | Alignment | Component |
+|------|----------|----------|
+| Left | Left-aligned | Rows Per Page |
+| Right | Right-aligned | Pagination |
+
+Layout example:
+[ Rows per page ▼ ] [ Pagination ]
+
+Rules:
+- Must be placed below table.
+- Use horizontal layout (single row).
+- Use space-between alignment.
+- Do not stack vertically.
+
+
+### Rows Per Page Usage
+
+#### Anatomy Rows Per Page
+
+1. Label (Rows per page)
+2. Select / Dropdown 
+3. Selected value
+4. Range info (e.g. 1–10 of 500)
+Example:
+Rows per page: [ 10 ▼ ] 1–10 of 500
+
+#### Properties Rows Per Page
+
+| Property | Values |
+|----------|--------|
+| Options | Number[] (10, 25, 50, 100) |
+| Default Value | Number |
+| Total Rows | Number |
+| Current Page | Number |
+| Disabled | Boolean |
+
+#### Behavior
+
+- Changing value updates visible rows.
+- Reset to **first page** when changed.
+- Update range text dynamically.
+- Affects total page calculation.
+
+#### Accessibility
+- Use `aria-label="Rows per page"`.
+- Ensure touch target ≥ 40px.
+- Must support keyboard navigation.
+
 ### Pagination Usage
+
+#### Anatomy Pagination
 
 1. Container
 2. Previous Button (optional, use icon_west)
@@ -3409,7 +3751,8 @@ Prefix + Suffix Example
 5. Ellipsis (...)
 6. Next Button (optional, Use icon_east)
 
-#### Properties
+
+#### Properties Pagination
 
  Property | Values |
 |----------|--------|
@@ -3421,6 +3764,18 @@ Prefix + Suffix Example
 | Show Ellipsis | Boolean |
 | Size | Default |
 
+
+#### Properties Rows Per Page
+
+| Property | Values |
+|----------|--------|
+| Options | Number[] (10, 25, 50, 100) |
+| Default Value | Number |
+| Total Rows | Number |
+| Current Page | Number |
+| Disabled | Boolean |
+
+
 #### Pagination Logic Rules
 
 - Always show first page.
@@ -3428,7 +3783,20 @@ Prefix + Suffix Example
 - Show current page and adjacent pages.
 - Use ellipsis (...) when page range is collapsed.
 - Limit visible page numbers to maintain readability.
+- Recalculate total pages when rows per page changes.
 
+#### Integration Rules
+
+- Rows per page and pagination must stay synchronized.
+- Changing rows per page resets current page.
+- Range label must reflect:
+  - current page
+  - rows per page
+  - total data
+Example:
+Rows per page: 10
+Total rows: 500
+→ Total pages = 50
 #### Do & Don't
 
 ##### ✅ Do
@@ -3494,6 +3862,14 @@ Example:
 </button>
 ```
 
+**Rows Per Page Rules**
+- Use rows per page for large datasets.
+- Keep layout left (rows per page) and right (pagination).
+- Maintain consistent spacing and alignment.
+- Ensure both controls update data together.
+
+
+
 #### ❌ Don't
 
 **Usage Rules**
@@ -3530,6 +3906,11 @@ Example:
 - Don't create pagination items too small to tap.
 - Don't disable navigation without feedback.
 
+**Rows Per Page Rules**
+- Don't separate rows per page from pagination.
+- Don't place rows per page above table.
+- Don't allow desync between controls.
+- Don't keep page position after rows per page changes.
 
 
 ## Progress Bar
@@ -4272,6 +4653,9 @@ Outer → underline navigation tab
 | `gap` | spacing | `0` |
 | `indicator-height` | size | `2` |
 | `bottom-stroke-height` | size | `1` |
+| `indicator-radius` | borderRadius | `999` |
+| `indicator-width` | size | `auto` |
+| `indicator-offset-y` | spacing | `-1` |
 
 ### Tab Usage
 
@@ -4297,9 +4681,46 @@ Outer → underline navigation tab
 | Scrollable | Boolean |
 | Full Width | Boolean |
 
+#### Outer Tab Indicator
+
+Defines visual style of active tab indicator.
+
+##### Style
+- Indicator is displayed only on active tab.
+- Positioned at the bottom of tab item.
+- Uses `indicator` color token.
+- Height follows `indicator-height`.
+- Width follows label width (not full container).
+- Must have rounded edges.
+
+##### Shape
+- Use `indicator-radius` to create rounded (pill) shape.
+- Indicator should not be sharp/boxy.
+- Recommended: fully rounded (pill shape).
+
+##### Layout Behavior
+- Indicator must align with tab label (not container).
+- Center horizontally within tab item.
+- Must animate position when active tab changes.
+
+##### Visual Example
+- Active Tab:
+Label
+────── (rounded blue indicator)
+- Inactive Tab:
+Label
+(no indicator)
+
+#### Interaction Behavior
+
+- Indicator moves smoothly when switching tabs.
+- Must not stretch across entire container.
+- Must not be full-width underline.
+- Must not have square edges.
+
 #### Do & Don't
 
-##### ✅ Do
+##### ✅ 
 
 **Usage Rules**
 - Use Inner tab inside panels, filters, or segmented content areas.
@@ -4376,6 +4797,11 @@ Example:
 </div>
 ```
 
+**Tab Outer Rules**
+- Use rounded indicator for active tab.
+- Keep indicator width proportional to label.
+- Maintain consistent spacing from label.
+
 ##### ❌ Don't
 
 **Usage Rules**
@@ -4421,6 +4847,11 @@ Example:
 - Don't create tabs too small to tap.
 - Don't hide active state from screen readers.
 - Don't disable tab navigation without explanation.
+
+**Tab Outer Rules**
+- Don't use full-width underline.
+- Don't use sharp corner indicator.
+- Don't detach indicator from tab item.
 
 
 ## Toast
@@ -4864,7 +5295,8 @@ It contains a left section (logo) and a right section (dynamic content such as a
 
 | Token | Type | Value |
 |-------|------|-------|
-| `container-width` | size | `1280` |
+| `container-min-width` | size | `1280` |
+| `container-width` | size | `48` |
 | `container-max-width` | size | `1440` |
 | `full-width` | boolean | `true` |
 
